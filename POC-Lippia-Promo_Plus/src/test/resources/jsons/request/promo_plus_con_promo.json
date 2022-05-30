@@ -1,0 +1,44 @@
+{
+  "url": "{{base.url}}",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "description":"Product Offering Qualification -  3512075117",
+    "instantSyncQualification":true,
+    "provideAlternative":true,
+    "provideOnlyAvailable":true,
+    "provideUnavailabilityReason":true,
+    "category":{"id":"FUNDS_CREDITS_RECHARGE"},
+    "channel":{"id":"IRIS"},
+    "note":[{"id":"Session-Id","text":"Agus-123456789"}],
+    "place":[{"id":"AR","role":"COUNTRY"}],
+    "productOfferingQualificationItem":[
+      {
+        "id":"1",
+        "action":"add",
+        "product":{
+          "id":300.0,
+          "productPrice":[
+            {
+              "priceType":"EVENTUAL",
+              "price":{
+                "taxIncludedAmount":{
+                  "unit":"ARS",
+                  "value":"{{monto}}"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "relatedParty":[
+      {
+        "id":"{{linea}}",
+        "role":"cliente"
+      }
+    ]
+  },
+  "endpoint": "tmf-api/productOfferingQualification/v4/productOfferingQualification"
+}
