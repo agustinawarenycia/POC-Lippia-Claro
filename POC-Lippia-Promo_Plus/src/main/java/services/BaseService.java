@@ -22,7 +22,7 @@ public class BaseService extends MethodsService {
         Request request = getRequest(jsonRequest, params);
         request.getHeaders().put("Accept-Charset", "utf-8");
         showRequest(request);
-        Response resp = get(request, classModel);
+        Response resp = get(request, classModel, getRestClient());
         String entity = classModel.getName().substring(classModel.getName().lastIndexOf(".") +1);
         showResponse(entity);
         return resp;
